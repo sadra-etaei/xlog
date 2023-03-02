@@ -1,0 +1,782 @@
+.navbar {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    position: relative;
+    justify-content: flex-start;
+    width: 100vw;
+    margin-top: 30px;
+
+}
+
+.navbar p:hover {
+    text-decoration: solid 2px black underline;
+    text-underline-offset: 8px;
+}
+
+.left_nav h1 {
+    margin-top: 8px;
+}
+
+.left_nav {
+    margin-left: 150px;
+    align-items: center;
+    /* justify-content: center; */
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.right_nav {
+    margin-left: 850px;
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+    justify-self: flex-end;
+}
+
+#btn {
+    margin-top: -10px;
+}
+
+.link {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #000;
+}
+
+.content {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0px;
+    /* margin-left: 250px; */
+}
+
+.home {
+    display: flex;
+    flex-direction: row;
+}
+
+.home_content {
+    display: flex;
+    align-self: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 0px;
+    margin-left: 150px;
+    margin-bottom: 50px;
+}
+
+.sidebar {
+    display: flex;
+    align-self: flex-start;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-top: 0px;
+    margin-left: 150px;
+    margin-bottom: 50px;
+}
+
+.sidebar-intro {
+    display: flex;
+    align-self: flex-start;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: -20px;
+}
+
+.profile_posts {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60vw;
+}
+
+.profile_post_line {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+
+#user_profile_functions {
+    margin-left: 700px;
+}
+
+#error_message {
+    color: red;
+}
+
+.post_box {
+    display: flex;
+    padding-left: 22px;
+    flex-direction: row;
+    color: black;
+    width: 550px;
+    height: 250px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+
+.post_box_text {
+    margin-top: -10px;
+    margin-left: -20px;
+    line-height: 25px;
+    overflow: hidden;
+    width: 335px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.post_upper_info {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.post_box_functions {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    position: sticky;
+    margin-bottom: 15px;
+    margin-left: -35px;
+}
+
+.post_box p {
+    padding-left: 20px;
+}
+
+.post_box h2 {
+    font-size: 20px;
+    margin-top: -5px;
+}
+
+.registration_formbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100vw;
+    height: 100vw;
+    color: black;
+    margin-top: -20px;
+}
+
+.registration_formbox h1 {
+    margin-bottom: 30px;
+}
+
+.forminput {
+    margin-left: 10px;
+    margin-top: -10px;
+    border-radius: 5px;
+    width: 400px;
+    height: 50px;
+}
+
+.registration_field {
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+    margin-left: -20px;
+}
+
+.registration_formbox button {
+    margin-top: 50px;
+    margin-left: 600px;
+}
+
+.registration_formbox label {
+    padding-left: 20px;
+    width: 180px;
+    color: #000;
+}
+
+.profile_email_box {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-items: baseline;
+}
+
+.profile_email_box h2 {
+    margin-left: 15px;
+    margin-top: -7px;
+}
+
+.info p {
+    margin-top: -5px;
+}
+
+#title {
+    width: 10vw;
+    height: 7vh;
+}
+
+#textarea {
+    width: 90vw;
+    height: 80vh;
+}
+
+.post_link {
+    color: black;
+    text-decoration: none;
+}
+
+.profile_page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -90px;
+}
+
+#btn {
+    background-color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 8%;
+    width: 60px;
+    cursor: pointer;
+}
+
+.profile_image {
+    width: 100px;
+    height: 100px;
+    align-self: start;
+    margin-top: 80px;
+    margin-left: 0px;
+    border-radius: 50px;
+    background-color: darkgray;
+}
+
+.info {
+    margin-top: 60px;
+    margin-left: 20px;
+}
+
+.personal_info {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    justify-self: flex-start;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 120px;
+    /* width: 1000px; */
+}
+
+.profile_functions {
+    align-self: flex-end;
+    margin-left: 300px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.edit {
+    margin-left: 530px;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+    justify-content: flex-start;
+    width: 400px;
+    height: 450px;
+    background-color: rgb(2, 2, 36);
+    border-radius: 2%;
+    display: none;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+}
+
+.circle {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    background-color: darkgray;
+    cursor: pointer;
+}
+
+.smallcircle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: darkgray;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.input {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 80px;
+}
+
+.input label {
+    margin-right: 10px;
+    margin-left: -30px;
+}
+
+.button {
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+#titleinput {
+    width: 400px;
+    height: 40px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 40px;
+}
+
+.postform {
+    margin-left: 40px;
+    margin-top: -20px;
+}
+
+#textarea {
+    margin-top: 40px;
+    width: 80vw;
+    height: 65vh;
+    margin-left: 50px;
+    border-radius: 10px;
+}
+
+#postsubmit {
+    margin-top: 30px;
+    margin-left: 80vw;
+    margin-bottom: 50px;
+}
+
+.postform-box {
+    /* display: flex;
+    flex-direction: column; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile {
+    background-size: 100% 100%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#navprofile {
+    /* margin-top: -20px; */
+    /* margin-bottom: 40px; */
+    /* border-radius: 60px;
+    margin-left: 20px; */
+    background-color: gray;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.post_profile {
+    width: 100px;
+    height: 100px;
+    align-self: start;
+    border-radius: 50px;
+    background-color: darkgray;
+    margin-left: -10px;
+    margin-top: 10px;
+
+}
+
+#post_profile_img {
+    background-size: 100% 100%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.post_info {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+.postlike {
+    background-size: 100% 100%;
+    width: 30px;
+    height: 30px;
+}
+
+.postsave {
+    background-size: 100% 100%;
+    width: 30px;
+    height: 30px;
+    padding-left: 20px;
+}
+
+.postPage {
+    display: flex;
+    flex-direction: column;
+    align-self: baseline;
+    justify-self: baseline;
+    margin-left: 170px;
+    margin-top: 0px;
+    width: 80vw;
+}
+
+.postPage_buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.postlike {
+    padding-left: 10px;
+}
+
+.post_page_info {
+    display: flex;
+    flex-direction: row;
+}
+
+.post_page_details {
+    padding-left: 10px;
+}
+
+.post_page_text {
+    line-height:
+        40px;
+}
+
+.post_box_profile {
+    width: 80px;
+    height: 80px;
+    align-self: start;
+    border-radius: 40px;
+    background-color: darkgray;
+    margin-left: -10px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.post_box_profile_img {
+    background-size: 100% 100%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.followingList {
+    width: 980vw;
+    height: 80vh;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    justify-self: flex-start;
+    align-self: center;
+    background-color: rgb(255, 253, 253);
+    opacity: 1;
+    z-index: 1;
+    top: 10px;
+    /* margin-top: -150px;
+    margin-left: 380px; */
+
+
+}
+
+#following_count {
+    margin-bottom: 40px;
+}
+
+#closelist {
+    margin-left: 350px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#closelist_edit {
+    justify-self: flex-start;
+    margin-left: 550px;
+    margin-top: -400px;
+    background-color: white;
+
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.userbox {
+    width: 400px;
+    height: 100px;
+}
+
+.upper_user_box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.user_img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+
+.upper_user_box div {
+    margin-top: -15px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.upper_user_box p {
+    margin-top: -10px;
+    font-size: 13px;
+}
+
+.upper_user_box button {
+    margin-left: 60px;
+}
+
+#blur {
+    filter: blur(2px);
+
+}
+
+
+
+@media only screen and (max-width:800px) {
+    .forminput {
+        width: 300px;
+        height: 30px;
+    }
+
+    .registration_formbox label {
+        font-size: 15px;
+
+    }
+
+    .registration_formbox {
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    .registration_field {
+        margin-left: 0px;
+    }
+
+    #signup_form {
+        margin-left: 0px;
+    }
+
+    #signupbtn {
+        margin-left: 180px;
+    }
+
+    .registration_field {
+        flex-direction: column;
+    }
+
+    .registration_field label {
+        margin-bottom: 20px;
+    }
+
+    #loginform form {
+        margin-left: 0px;
+    }
+
+    #loginbtn {
+        margin-left: 180px;
+    }
+
+    .home {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .post_box {
+        margin-left: 32px;
+        width: 250px;
+        height: 250px;
+        font-size: 13px;
+        flex-direction: column;
+    }
+
+    .post_box h2 {
+        font-size: 17px;
+    }
+
+    .post_box_profile_img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .post_box_profile {
+        width: 40px;
+        height: 40px;
+    }
+
+    .post_box_text {
+        width: 250px;
+        /* height: 250px; */
+    }
+
+    .sidebar-intro {
+        align-self: center;
+        margin-left: -120px;
+    }
+
+    #titleinput {
+        width: 250px;
+    }
+
+    #textarea {
+        margin-left: -10px;
+    }
+
+    .title_in_class {
+        margin-top: 50px;
+        margin-left: -20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #postsubmit {
+        margin-left: 60px;
+    }
+
+    .postPage {
+        margin-left: 30px;
+        margin-top: -20px;
+        font-size: 14px;
+    }
+
+    .postPage_buttons {
+        flex-direction: column;
+        padding-top: 10px
+    }
+
+    .button {
+        margin-top: 30px;
+    }
+
+    .profile_page {
+        margin-top: -100px;
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .personal_info {
+        font-size: 13px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        align-self: center;
+        margin-left: 0px;
+    }
+
+    .profile_post_line {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile_image {
+        align-self: center;
+        margin-left: 0px;
+        margin-top: 100px;
+    }
+
+    .profile_functions {
+        align-self: center;
+        margin-left: 40px;
+    }
+
+    .followingList {
+        font-size: 13px;
+        align-items: center;
+    }
+
+    .userbox button {
+        margin-left: 20px;
+    }
+
+    #closelist {
+        margin-left: 250px;
+    }
+
+    .userbox {
+        margin-left: 80px;
+    }
+
+    .userbox p {
+        width: 100px;
+    }
+
+    .edit {
+        height: 420px;
+        width: 280px;
+        margin-left: 22px;
+        margin-top: 80px;
+    }
+
+    #closelist_edit {
+        margin-left: 280px;
+    }
+
+    #base_profile {
+        width: 50px;
+        height: 50px;
+    }
+
+    #base_circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    #user_profile_functions {
+        margin-left: 0px;
+    }
+
+    #navprofile {
+        width: 50px;
+        height: 50px;
+        margin-left: -20px;
+    }
+
+    #btn {
+        font-size: 13px;
+        margin-bottom: 10px;
+        margin-right: 0px;
+    }
+}
