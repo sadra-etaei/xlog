@@ -5,16 +5,18 @@ import heart from "../media/icons/heart.png"
 import redheart from "../media/icons/icons8-heart-suit-48.png"
 import save from "../media/icons/save-instagram.png"
 import unsave from "../media/icons/bookmark.png"
+import Comment from "./comment"
 export default function PostPage() {
     const loggedin = localStorage.getItem("loggedin")
     const navigate = useNavigate()
     const [profile, setProfile] = useState("")
+    const [commentText, setCommentText] = useState("")
+    const [comments, setComments] = useState([])
 
+    const username = localStorage.getItem("username")
     const userid = localStorage.getItem("id")
     const loc = useLocation()
     const [likeimg, setLikeimg] = useState(loc.state.likes.includes(String(userid)) ? redheart : heart)
-
-    console.log(loc.state)
     const [saveimg, setSaveimg] = useState(loc.state.saved.includes(String(loc.state.pk)) ? unsave : save)
     function getProfile() {
         axios.get(`/api/profile/${loc.state.profile}`).then(response => setProfile(response.data))
@@ -22,7 +24,7 @@ export default function PostPage() {
     useEffect(getProfile, [userid])
     function deletePost() {
         axios.delete(`/api/posts/${loc.state.pk}`).then(response => console.log(response))
-            .catch(error => console.log(error.response.data)).then(navigate("/"))
+            .catch(error => console.log(error.response.data)).then(navigate("/home"))
     }
     function publishPost() {
         axios.post(`/api/posts/${loc.state.pk}/publish/`, { pk: loc.state.pk }).then(navigate("/home"))
@@ -55,6 +57,25 @@ export default function PostPage() {
             setSaveimg(save)
         }
     }
+    function handleChange(e) {
+        setCommentText(e.target.value)
+    }
+
+    function comment(e) {
+        e.preventDefault()
+        const data = { text: commentText, post: loc.state.pk, user: userid, writtenDate: new Date() }
+        axios.post(`/api/post/comment/${loc.state.pk}/`, data).then(response => console.log(response.data))
+        console.log(data)
+        window.location.reload()
+    }
+
+    function getComments() {
+        axios.get(`/api/post/${loc.state.pk}/comments/`).then(response => setComments(response.data))
+    }
+
+    useEffect(getComments, [])
+
+    const commentElements = comments.map(comment => <Comment text={comment.text} date={comment.writtenDate} user={comment.user} post={comment.post} />)
     var status = ""
     if (loc.state.author == userid) {
         status = true
@@ -85,6 +106,18 @@ export default function PostPage() {
                 {status ? <button className="button" onClick={updatePost}>update this post </button> : ""}
                 {status ? <button className="button" onClick={deletePost}>delete this post </button> : ""}
                 {loc.state.pb ? "" : <button className="button" onClick={publishPost}>publish this post</button>}
+            </div>
+            <div className="comment_section">
+                <h1>Comment on this Post :</h1>
+
+                <form onSubmit={comment} className="comment_box">
+                    <textarea onChange={handleChange} id="comment_text" ></textarea>
+                    <input id="comment_submit" className="button" type={"submit"} />
+                </form>
+
+                <div className="comments">
+                    {commentElements}
+                </div>
             </div>
         </div>
     )

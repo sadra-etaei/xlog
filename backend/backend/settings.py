@@ -13,7 +13,6 @@ import datetime
 
 import django
 import corsheaders
-import hitcount
 
 from pathlib import Path
 import os
@@ -47,7 +46,8 @@ INSTALLED_APPS = [
     'frontend',
     'accounts',
     'posts',
-    'PIL'
+    'PIL',
+    'comments'
 ]
 
 MIDDLEWARE = [
@@ -57,6 +57,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -141,6 +142,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, '../frontend/build/static'),
 ]
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 MEDIAFILES_DIRS = [
@@ -155,6 +157,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:8000",
+    # "http://127.0.0.1:8000/#",
 ]
 
 CORS_ALLOW_METHODS = [

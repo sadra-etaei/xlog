@@ -22,7 +22,7 @@ class User(auth.User, auth.PermissionsMixin):
 
 class Profile(models.Model):
     user = models.OneToOneField(auth.User, related_name="profile", on_delete=models.CASCADE)
-    profile_image = models.ImageField(upload_to='profiles', blank=True, null=True)
+    profile_image = models.ImageField(upload_to='media/profiles', blank=True, null=True)
     bio = models.TextField(blank=True)
 
     def update(self, bio, img):

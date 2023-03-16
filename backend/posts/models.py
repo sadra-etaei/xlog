@@ -9,11 +9,14 @@ User = get_user_model()
 class Post(models.Model):
     profile = models.ForeignKey(Profile, on_delete=models.CASCADE, null=True)
     author = models.ForeignKey(get_user_model(), related_name="posts", on_delete=models.CASCADE, unique=False)
-    title = models.CharField(max_length=500)
+    title = models.CharField(max_length=500, unique=True)
     text = models.TextField(blank=True)
     creationDate = models.DateTimeField(default=timezone.now())
     publicationDate = models.DateTimeField(blank=True, null=True)
     publicationShortDate = models.CharField(blank=True, null=True, max_length=100)
+
+    class Meta:
+        unique_together = ('author','title')
 
     def publish(self):
         self.publicationDate = timezone.now()

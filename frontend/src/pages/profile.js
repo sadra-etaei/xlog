@@ -9,7 +9,7 @@ export default function Profile() {
     var followerList = document.getElementsByClassName("followingList")[1]
     var edit = document.getElementsByClassName("edit")[0]
     var followingList = document.getElementsByClassName("followingList")[0]
-    var body = document.getElementsByClassName("profile")[0]
+    var body = document.getElementsByClassName("profile_page")[0]
     var upload = document.getElementById("upload")
     const nav = useNavigate("")
     const user = { username: localStorage.getItem("username"), email: localStorage.getItem("email"), id: localStorage.getItem("id"), profile: localStorage.getItem("profile"), following: localStorage.getItem("following") }

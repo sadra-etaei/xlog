@@ -63,6 +63,7 @@ export default function Login() {
                 localStorage.setItem("profile", response.data.profile)
                 localStorage.setItem('following', response.data.following)
                 localStorage.setItem('saved',response.data.saved)
+                localStorage.setItem('token',response.data.token)
 
                 console.log(response.data)
                 nav(`/profile/${response.data.id}`, { state: response.data.id })

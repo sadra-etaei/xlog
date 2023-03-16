@@ -38,9 +38,9 @@ export default function Base() {
 
     return (
         <main>
-            <div className="navbar">
+            <div id="nav_section" className="navbar">
                 <div className="left_nav">
-                    {loggedin ? <Link className="link" to="/home" > <h1>Blog</h1></Link> : <Link className="link" to="/" > <h1>Blog</h1></Link> }
+                    {loggedin ? <Link className="link" to="/home" > <h1>Xlog</h1></Link> : <Link className="link" to="/" > <h1>Xlog</h1></Link> }
                     {loggedin ? <Link className="link" to="/drafts" ><p>Drafts</p></Link> : ""}
                     {loggedin ? <Link className="link" to="/create" ><p>Create</p></Link> : ""}
                     {/* {loggedin ? <Link className="link" to="/topics" ><p>Topics</p></Link> : ""} */}

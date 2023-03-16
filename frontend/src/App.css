@@ -1,8 +1,13 @@
 .bg h1 {
-    margin-top: -400px;
+    /* margin-top: -400px; */
     color: white;
     align-self: center;
     font-size: 50px;
+}
+
+.bg h2 {
+    font-size: 30px;
+    margin-right: 1100px;
 }
 
 .bg {
@@ -12,7 +17,24 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 150px;
-    height: 100vh;
+    width: 100vw;
+    height: 120vh;
+}
+
+#landing_nav {
+    margin-left: 150px;
+    margin-top: -600px;
+    align-items: center;
+    color: white;
+}
+
+#landing_nav p {
+    color: white;
+}
+
+#landing_nav p:hover {
+    text-decoration: solid 2px white underline;
+    text-underline-offset: 12px;
 }
 
 .bg img {
@@ -55,11 +77,27 @@ a {
 }
 
 @media only screen and (max-width:800px) {
-    body{
+    body {
         overflow-x: hidden;
     }
+
+    .bg {
+        width: 100vw;
+        margin-left: 132px;
+    }
+
+    #landing_nav {
+        margin-top: -450px;
+        margin-left: 40px;
+    }
+
+    .bg h2 {
+        margin-right: 100px;
+    }
+
     .bg h1 {
         font-size: 25px;
+        margin-top: 50px;
     }
 
     .midpart {
@@ -82,25 +120,31 @@ a {
         font-size: 10px;
         margin-left: 25px;
     }
-    .navbar h1{
+
+    .navbar h1 {
         font-size: 15px;
     }
-    .navbar{
+
+    .navbar {
         margin-top: 0px;
         margin-bottom: 10px;
         margin-left: -295px;
         z-index: 1;
         font-size: 13px;
     }
-    .right_nav{
+
+    .right_nav {
         align-items: flex-end;
         margin-left: 15px;
         margin-bottom: 0px;
+        
     }
-    .footer{
+
+    .footer {
         width: 100vw;
-        margin-left: 116px;
+        margin-left: 132px;
     }
+
     .footer p {
         font-size: 12px;
     }

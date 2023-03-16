@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import Post from "./post"
 import axios from "axios"
 export default function Saved() {
-    const [posts, setPosts] = useState({})
+    const [posts, setPosts] = useState([])
     var userid = localStorage.getItem("id")
     function getSaved() {
         axios.get(`/api/saved/${userid}/`).then(response => setPosts(response.data))

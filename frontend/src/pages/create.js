@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function Create() {
     const nav = useNavigate()
-
+    const token = localStorage.getItem("token")
     const user = localStorage.getItem("username")
     const userid = localStorage.getItem("id")
     const profileid = localStorage.getItem("profile")
@@ -21,14 +21,16 @@ export default function Create() {
             setForm(prevForm => { return { ...prevForm, text: event.target.value } })
         }
     }
+
     function postForm(event) {
         event.preventDefault()
         axios.post('/api/post/create', JSON.stringify(form), {
             "headers": {
+                "Authentication" :`Token ${token}`, 
                 'Content-Type': 'application/json',
             }
         })
-            .then(response => nav(`/posts/${response.data.pk}`, { state: { ...response.data, user: user } }))
+            .then(response => nav(`/posts/${response.data.pk}`, { state: { ...response.data, user: user , likes : [] , saved : [] } }))
         console.log(form)
     }
     return (

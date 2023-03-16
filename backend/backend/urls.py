@@ -19,6 +19,7 @@ from frontend import urls
 from accounts.views import UserList, UserDetail, UserPost, LoginView, LogoutView, ProfileView, FollowUser, UserFollowings, UserFollowers
 from posts.views import PostList, PostDetail, DraftsList, PostCreate, PostPublish, PostUpdate, PostLike, PostSave, \
     SavedPosts, PersonalPosts, TrendingPosts
+from comments.views import CommentCreate, CommentsList
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -46,6 +47,8 @@ urlpatterns = [
                   path('api/posts/trending/',TrendingPosts.as_view() ),
                   path('api/followings/<int:pk>/', UserFollowings.as_view()),
                   path('api/followers/<int:pk>/', UserFollowers.as_view()),
+                  path('api/post/<int:pk>/comments/', CommentsList.as_view()),
+                  path('api/post/comment/<int:pk>/', CommentCreate.as_view()),
 
                   path('', include(urls))
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

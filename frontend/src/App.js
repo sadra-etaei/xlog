@@ -1,5 +1,5 @@
 // import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter , Router, Route, Routes} from "react-router-dom";
 import React from 'react';
 import Base from "./pages/base"
 import Home from "./pages/home"
@@ -17,7 +17,7 @@ import LandingPage from './landing';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter >
       <Routes>
         <Route path='/' element={<Base />} >
           <Route index element={<LandingPage />} />
@@ -34,7 +34,7 @@ function App() {
           <Route path='/saved/' element={<Saved/>} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
